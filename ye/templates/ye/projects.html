@@ -1,0 +1,31 @@
+{% extends 'ye/main.html' %}
+
+{% block content %}
+
+{{page}}
+{% if number > 10 %}
+<P>Number if greater than 10</P>
+{% elif number == 10 %}
+<p>Number is exactly 10</p>
+{% else %}
+<p>Number is less than 10</p>
+{% endif %}
+
+
+
+
+<hr>
+
+<h1>Project template</h1>
+
+<ul>
+    {% for x in projectL %}
+
+    <li>Tittle:<a href ="myfunction2/{{x.id}}">{{x.title}}<a/> --- {{x.description}}</li>
+
+    {% endfor %}
+</ul>
+ 
+
+
+{% endblock content %}
